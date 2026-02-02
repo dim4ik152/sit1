@@ -1047,3 +1047,19 @@ input:focus, textarea:focus, select:focus{
 @media (max-width: 520px){
   .about-kicker{ width: fit-content; }
 }
+@media (max-width: 980px){
+  .about-hero-inner{
+    display: flex;          /* переопределяем grid */
+    flex-direction: column; /* вертикально */
+    gap: 18px;
+  }
+
+  .about-hero-photo{ order: 1; width: 100%; justify-self: unset; display: flex; justify-content: center; }
+  .about-hero-text{ order: 2; }
+
+  /* если фото тоже PNG и хочешь меньше */
+  .about-photo{
+    width: min(280px, 82vw);
+    height: auto;
+  }
+
